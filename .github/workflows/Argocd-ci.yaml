@@ -15,7 +15,7 @@ on:
       - test
 env:     
   IMAGE: mywebsite
-  DOCKERHUB_USERNAME: <username> 
+  DOCKERHUB_USERNAME: avanpatel25 
 
 jobs:
   build:
