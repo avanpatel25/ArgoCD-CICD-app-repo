@@ -1,23 +1,18 @@
-
-FROM ubuntu:latest
-
 WORKDIR /root/
 
-# Copy the application binary
-COPY /app/currency_converter .  # Ensure this path is correct
 
-# Create the /static directory
-RUN mkdir -p /root/static
+COPY /app/currency_converter . # buildkit
 
-# Copy static files to /root/static
-COPY /app/static /root/static  # Ensure this path is correct
+RUN mkdir -p /static
 
-# Make the application executable
-RUN chmod +x /root/currency_converter
 
-# Expose port 8080
+COPY /app/static ./static # buildkit
+
+
+RUN /bin/sh -c chmod +x
+
+
 EXPOSE 8080
 
-# Run the application
-CMD ["./currency_converter"]
 
+CMD ["./currency_converter"]
