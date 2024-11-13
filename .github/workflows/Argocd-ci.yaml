@@ -33,5 +33,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file : ./
           push: true
           tags: avanpatel25/k8s-hindi-app1:1.2-major
