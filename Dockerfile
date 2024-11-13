@@ -1,11 +1,5 @@
 
-ADD file ... in /
-
-
-CMD ["/bin/sh"]
-
-
-RUN /bin/sh -c apk --no-cache
+FROM ubuntu:latest
 
 
 WORKDIR /root/
