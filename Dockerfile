@@ -14,7 +14,7 @@ COPY /app/static ./static # buildkit
 RUN /bin/sh -c chmod +x
 
 
-EXPOSE map[8080/tcp:{}]
+EXPOSE 8080
 
 
 CMD ["./currency_converter"]
